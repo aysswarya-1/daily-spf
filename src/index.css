@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Geist;
+    src: url("../src/assets/Font/Geist-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #F4F1DE;
+    --color-secondary: #E5B533;
+    --color-tertiary: #E8E5D3;
+    --color-seconday-Dark: #B79028;
+    --color-tertiary-Dark: #D0CEBE;
+    --font-geist: Geist, 'Verdana, Geneva, Tahoma, sans-serif'
+}
