@@ -12,7 +12,7 @@ const CTA = () => {
                         </p>
                         {/* btn */}
                         <div className="flex gap-x-5">
-                            <button className="text-sm sm:text-base px-6 py-2 text-white bg-secondary border-b-4 border-seconday-Dark rounded-full">Shop now</button>
+                            <button className="text-sm sm:text-base px-4 sm:px-6 sm:py-2 text-white bg-secondary border-b-4 border-seconday-Dark rounded-full">Shop now</button>
                             <button className="text-sm sm:text-base px-6 py-2 rounded-full bg-tertiary border-b-4 border-tertiary-Dark">Learn more
                             </button>
                         </div>

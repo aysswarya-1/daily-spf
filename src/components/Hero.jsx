@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 const Hero = () => {
     return (
@@ -26,32 +27,14 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.5 }}
                         className="space-x-4 mt-4 md:mt-8">
-                        <motion.button
-                            whileTap={{ scale: 0.9 }}
-                            whileHover={{
-                                scale: 1.1,
-                                backgroundColor: "#ffffff",
-                                color: "#E5B533"
-                            }}
-                            transition={{
-                                bounceDamping: 10,
-                                bounceStiffness: 600
-                            }}
-                            className="text-sm sm:text-xl px-6 py-2 text-white rounded-full bg-secondary border-b-4 border-seconday-Dark mb-2">
-                            Shop now</motion.button>
-                        <motion.button
-                            whileTap={{ scale: 0.9 }}
-                            whileHover={{
-                                scale: 1.1,
-                                backgroundColor: "#ffffff",
-                                color: "#E8E5D3"
-                            }}
-                            transition={{
-                                bounceDamping: 10,
-                                bounceStiffness: 600
-                            }}
-                            className="text-sm sm:text-xl px-6 py-2 text-gray-500 rounded-full bg-tertiary border-b-4 border-tertiary-Dark">
-                            Learn more</motion.button>
+                        <Link
+                            to="/products"
+                            className="text-sm sm:text-xl px-6 py-2 text-white rounded-full bg-secondary border-b-4 border-seconday-Dark mb-2 hover:bg-secondary/90">
+                            Shop now</Link>
+                        <Link
+                            to="/about"
+                            className="text-sm sm:text-xl px-6 py-2 rounded-full bg-tertiary border-b-4 border-tertiary-Dark hover:bg-tertiary-Dark/50">
+                            Learn more</Link>
                     </motion.div>
                 </div>
 

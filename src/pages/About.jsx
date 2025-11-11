@@ -4,7 +4,7 @@ import { Lightbulb, ShieldCheck, Users2 } from "lucide-react";
 
 const About = () => {
     return (
-        <div className="mt-20 md:mt-24">
+        <div className="mt-20 md:mt-24 sm:p-4">
             {/* banner */}
             <div className="w-full max-w-6xl mx-auto px-4">
                 <div className="rounded-xl overflow-hidden h-56 md:h-72">
@@ -18,8 +18,13 @@ const About = () => {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <h2 className="text-xl md:text-2xl font-semibold text-white -mt-10 md:-mt-12 ml-6">
-                    Our mission</h2>
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 1 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}
+                    className="text-xl md:text-2xl font-semibold text-white -mt-10 md:-mt-12 ml-6">
+                    Our mission</motion.h2>
             </div>
 
             <div className="max-w-6xl mx-auto px-4 mt-12">
@@ -40,7 +45,7 @@ const About = () => {
                 <h2 className="font-semibold text-xl md:text-2xl">Our Values</h2>
 
                 {/* cards */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
                     <InfoCard
                         Icon={ShieldCheck}
                         title="Sun Safety"

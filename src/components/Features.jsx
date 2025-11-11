@@ -8,7 +8,7 @@ const Features = () => {
             <div className="max-w-7xl mx-auto w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
                 {/* left */}
                 <motion.div
-                    initial={{ y: -50, opacity: 0 }}
+                    initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{
                         duration: 0.6,

@@ -1,11 +1,13 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import products from "../helpers/productsData";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const ProductList = () => {
     const navigate = useNavigate();
     const [query, setQuery] = useState("")
+    const [open, setOpen] = useState(false);
     const [sortType, setSortType] = useState("none")
 
     // filter & sort
@@ -21,7 +23,7 @@ const ProductList = () => {
         <section className="pt-24 pb-16 bg-primary min-h-screen relative">
             <div className="max-w-7xl mx-auto px-6">
 
-                <h1 className="text-4xl font-bold text-secondary text-center mb-10">
+                <h1 className="text-4xl font-bold text-secondary mb-10">
                     Our Products
                 </h1>
 
@@ -38,15 +40,47 @@ const ProductList = () => {
                     />
 
                     {/* sort dropdown */}
-                    <select
-                        value={sortType}
-                        onChange={(e) => setSortType(e.target.value)}
-                        className="px-4 py-2 rounded-lg border shadow-sm cursor-pointer"
-                    >
-                        <option value="none">Sort by</option>
-                        <option value="low">Price: Low to High</option>
-                        <option value="high">Price: High to Low</option>
-                    </select>
+                    <div className="relative">
+                        <button
+                            onClick={() => setOpen(!open)}
+                            className="px-4 py-2 md:mr-20 bg-primary rounded-lg border border-secondary-Dark shadow-sm 
+                          text-gray-700 font-medium flex items-center gap-2 cursor-pointer hover:text-secondary transition">
+                            {sortType === "none" && "Sort by"}
+                            {sortType === "low" && "Low to High"}
+                            {sortType === "high" && "High to Low"}
+                            <ChevronDown size={18}
+                                className={`ml-1 w-4 h-4 transform transition-transform ${open ? "rotate-180" : ""}`} />
+                        </button>
+
+                        <AnimatePresence>
+                            {open && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 0.2, ease: "easeOut" }}
+                                    className="absolute md:left-0 -translate-x-1/2 left-[100px] sm:translate-x-0 mt-2 
+                                     w-48 bg-primary rounded-lg shadow-md border border-seconday-Dark z-20 max-w-[90vw]">
+
+                                    <button
+                                        onClick={() => { setSortType("none"); setOpen(false); }}
+                                        className="block w-full text-left px-4 py-2 text-gray-700 hover:text-secondary transition">
+                                        None
+                                    </button>
+                                    <button
+                                        onClick={() => { setSortType("low"); setOpen(false); }}
+                                        className="block w-full text-left px-4 py-2 text-gray-700 hover:text-secondary transition">
+                                        Price: Low to High
+                                    </button>
+                                    <button
+                                        onClick={() => { setSortType("low"); setOpen(false); }}
+                                        className="block w-full text-left px-4 py-2 text-gray-700 hover:text-secondary transition">
+                                        Price: Low to High
+                                    </button>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                 </div>
 
                 {/* products */}
@@ -54,12 +88,13 @@ const ProductList = () => {
                     {filtered.map((product, key) => (
                         <motion.div
                             key={key}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{
-                                duration: 0.5,
-                                ease: [0.25, 0.1, 0.25, 1], // custom cubic bezier
-                                delay: key * 0.2
+                                type: "spring",
+                                stiffness: 120,
+                                damping: 16,
+                                delay: key * 0.08,
                             }}
                             onClick={() => navigate(`/products/${product.id}`)}
                             className="bg-white cursor-pointer rounded-xl shadow-lg hover:shadow-2xl p-6 transition"

@@ -26,7 +26,7 @@ const Navbar = () => {
           {/* desktopMenu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/products" className="hover:text-secondary transition hover:scale-105">
-              Product </Link>
+              Products </Link>
             <Link to="/about" className="hover:text-secondary transition hover:scale-105">
               About</Link>
             <Link to="/blog" className="hover:text-secondary transition hover:scale-105">
@@ -77,7 +77,7 @@ const Navbar = () => {
               {/* badge */}
               {totalItems > 0 && (
                 <span
-                  className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full size-5 flex items-center justify-center">
+                  className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full size-5 flex items-center justify-center animate-pulse">
                   {totalItems}
                 </span>
               )}
@@ -100,9 +100,9 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-primary/80 backdrop-blur-md shadow-sm">
           <div className="px-4 py-3 flex flex-col space-y-2">
-            <a href="#about" className="hover:text-secondary transition">Product</a>
-            <a href="#about" className="hover:text-secondary transition">About</a>
-            <a href="#about" className="hover:text-secondary transition">Blog</a>
+            <Link to="/products" className="hover:text-secondary transition">Products</Link>
+            <Link to="/about" className="hover:text-secondary transition">About</Link>
+            <Link to="/blog" className="hover:text-secondary transition">Blog</Link>
 
             {/* dropdown mobile menu */}
             <div>

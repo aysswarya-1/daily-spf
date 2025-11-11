@@ -1,11 +1,12 @@
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
         <footer className="bg-primary">
             <section className="max-w-7xl mx-auto py-12 sm:pt-20 px-5">
                 {/* top */}
-                <div className="flex flex-col lg:flex-row gap-x-20">
+                <div className="flex flex-col lg:flex-row md:items-center gap-x-20">
                     <div className="flex-1 max-w-lg">
                         {/* logo */}
                         <a href="#" className="text-lg md:text-2xl font-bold font-geist mb-6 block">
@@ -18,8 +19,10 @@ const Footer = () => {
                         <form>
                             <input type="email" name="email" placeholder="Your email"
                                 className="w-full sm:w-sm border p-2 mb-6 sm:mr-3" />
-                            <button className="w-full sm:w-[100px] text-sm sm:text-base px-2 py-2 mb-2 text-white rounded-full bg-tertiary border-b-4 border-tertiary-Dark cursor-pointer">
-                                Sign up</button>
+                            <Link
+                                to="/signup"
+                                className="w-full sm:w-[100px] text-sm sm:text-base px-4 py-2 mb-2 text-slate-600 rounded-full bg-tertiary border-b-4 border-tertiary-Dark cursor-pointer">
+                                Sign up</Link>
                         </form>
                         <p className="text-xs text-gray-500">
                             By subscribing, you agree to our privacy policy and email terms.
@@ -27,7 +30,7 @@ const Footer = () => {
                     </div>
 
                     {/* Links */}
-                    <div className="flex-1 flex flex-col md:flex-row justify-end gap-y-10 gap-x-28 mt-10 lg:mt-0">
+                    <div className="flex-1 flex flex-col flex-wrap md:flex-row justify-end gap-y-10 gap-x-28 mt-10 lg:mt-0">
                         <div className="flex flex-col gap-y-3">
                             <p className="font-semibold">Quick links</p>
                             <a className="hover:text-secondary">Explore</a>
@@ -39,9 +42,9 @@ const Footer = () => {
 
                         <div className="flex flex-col gap-y-3">
                             <p className="font-semibold">Support</p>
-                            <a className="hover:text-secondary">About Us</a>
-                            <a className="hover:text-secondary">Products</a>
-                            <a className="hover:text-secondary">Blog</a>
+                            <Link to="/about" className="hover:text-secondary">About Us</Link>
+                            <Link to="/products" className="hover:text-secondary">Products</Link>
+                            <Link to="/blog" className="hover:text-secondary">Blog</Link>
                             <a className="hover:text-secondary">FAQ</a>
                             <a className="hover:text-secondary">Contact</a>
                         </div>
@@ -49,17 +52,17 @@ const Footer = () => {
                         <div className="flex flex-col gap-y-3">
                             <p className="font-semibold ">Connect with us</p>
                             <a className="flex items-center gap-x-1 hover:text-secondary">
-                                <Facebook className="text-gray-700" />Facebook</a>
+                                <Facebook className="text-gray-800" />Facebook</a>
                             <a className="flex items-center gap-x-1 hover:text-secondary">
-                                <Instagram className="text-gray-700" />Instagram</a>
+                                <Instagram className="text-gray-800" />Instagram</a>
                             <a className="flex items-center gap-x-1 hover:text-secondary">
-                                <Twitter className="text-gray-700" />X
+                                <Twitter className="text-gray-800" />X
                             </a>
                             <a className="flex items-center gap-x-1 hover:text-secondary">
-                                <Linkedin className="text-gray-700" />LinkedIn
+                                <Linkedin className="text-gray-800" />LinkedIn
                             </a>
                             <a className="flex items-center gap-x-1 hover:text-secondary">
-                                <Youtube className="text-gray-700" />YouTube
+                                <Youtube className="text-gray-800" />YouTube
                             </a>
                         </div>
                     </div>

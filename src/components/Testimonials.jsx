@@ -73,7 +73,7 @@ const Testimonials = () => {
                     {/* left arrow */}
                     <button
                         onClick={prevSlide}
-                        className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-secondary text-white rounded-full p-2 hover:scale-105 transition">
+                        className="hidden md:block absolute -left-6 top-1/2 -translate-y-1/2 z-10 bg-secondary/70 text-white rounded-full p-2 hover:scale-105 transition">
                         <ChevronLeft size={24} />
                     </button>
 
@@ -129,7 +129,7 @@ const Testimonials = () => {
                     {/* right arrow */}
                     <button
                         onClick={nextSlide}
-                        className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 bg-secondary text-white rounded-full p-2 hover:scale-105 transition">
+                        className="hidden md:block absolute -right-6 top-1/2 -translate-y-1/2 bg-secondary/70 text-white rounded-full p-2 hover:scale-105 transition">
                         <ChevronRight size={24} />
                     </button>
                 </div>
