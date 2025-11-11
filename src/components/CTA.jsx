@@ -1,3 +1,4 @@
+import ctaimg from '../assets/images/CTA.png'
 const CTA = () => {
     return (
         <section className="bg-white/40">
@@ -12,7 +13,7 @@ const CTA = () => {
                         </p>
                         {/* btn */}
                         <div className="flex gap-x-5">
-                            <button className="text-sm sm:text-base px-4 sm:px-6 sm:py-2 text-white bg-secondary border-b-4 border-seconday-Dark rounded-full">Shop now</button>
+                            <button className="text-sm sm:text-base px-6 py-2 text-white bg-secondary border-b-4 border-seconday-Dark rounded-full">Shop now</button>
                             <button className="text-sm sm:text-base px-6 py-2 rounded-full bg-tertiary border-b-4 border-tertiary-Dark">Learn more
                             </button>
                         </div>
@@ -22,7 +23,8 @@ const CTA = () => {
                     {/* image */}
                     <div className="flex-1">
                         <div
-                            className="bg-[url('/images/CTA.png')] bg-cover bg-center w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-br-4xl rounded-bl-4xl sm:rounded-bl-none sm:rounded-tr-4xl">
+                            style={{ backgroundImage: `url(${ctaimg})` }}
+                            className="bg-cover bg-center w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-br-4xl rounded-bl-4xl sm:rounded-bl-none sm:rounded-tr-4xl">
                         </div>
                     </div>
                 </div>

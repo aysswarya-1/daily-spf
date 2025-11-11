@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import ProductList from "./pages/ProductList"
 import ProductModal from "./pages/ProductModal"
@@ -13,7 +13,7 @@ import ScrollToTop from "./components/ScrollToTop"
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
 
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

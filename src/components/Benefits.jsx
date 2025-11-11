@@ -1,5 +1,8 @@
 import { ChevronRight } from "lucide-react"
 import FadeIn from "../helpers/FadeIn"
+import card_1 from "../assets/images/card_1.png"
+import card_2 from "../assets/images/card_2.png"
+import card_3 from "../assets/images/card_3.png"
 const Benefits = () => {
     return (
         <section className="bg-primary">
@@ -22,7 +25,7 @@ const Benefits = () => {
                         <div className="max-w-[394px]">
                             <img
                                 className="rounded-3xl mb-6 sm:mb-8"
-                                src="/images/card_1.png" alt="card_1" />
+                                src={card_1} alt="card_1" />
                             <p className="text-sm sm:text-base font-mono text-seconday-Dark">
                                 Step 1 – Prep & Cleanse</p>
                             <h3 className="text-[22px] sm:text-4xl text-seconday-Dark font-semibold">
@@ -36,7 +39,7 @@ const Benefits = () => {
                         <div className="max-w-[394px] lg:pt-24">
                             <img
                                 className="rounded-3xl mb-8"
-                                src="/images/card_2.png" alt="card_2" />
+                                src={card_2} alt="card_2" />
                             <p className="text-sm sm:text-base font-mono text-seconday-Dark">
                                 Step 2 – Protect & Shield</p>
                             <h3 className="text-[22px] sm:text-4xl text-seconday-Dark font-semibold">
@@ -50,7 +53,7 @@ const Benefits = () => {
                         <div className="max-w-[394px] lg:pt-48">
                             <img
                                 className="rounded-3xl mb-8"
-                                src="/images/card_3.png" alt="card_3" />
+                                src={card_3} alt="card_3" />
                             <p className="text-sm sm:text-base font-mono text-seconday-Dark">
                                 Step 3 – Reapply & Restore</p>
                             <h3 className="text-[22px] sm:text-4xl text-seconday-Dark font-semibold">

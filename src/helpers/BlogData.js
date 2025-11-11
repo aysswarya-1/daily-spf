@@ -1,3 +1,6 @@
+import coconut from '../assets/images/products/coconut.png'
+import card from '../assets/images/card_2.png'
+
 export const blogPosts = [
     {
         id: 1,
@@ -40,8 +43,7 @@ export const blogPosts = [
         author: "Emily Rivera",
         date: "5 days ago",
         category: "Lifestyle",
-        image:
-            "/images/card_2.png",
+        image: card,
     },
     {
         id: 5,
@@ -127,8 +129,7 @@ export const blogPosts = [
         author: "Dr. Ethan Wallace",
         date: "3 months ago",
         category: "Sunscreen",
-        image:
-            "/images/products/coconut.png",
+        image: coconut,
     },
     {
         id: 13,
@@ -147,7 +148,7 @@ export const blogPosts = [
         excerpt:
             "Unlock the science behind antioxidants and how they work with SPF to defend against free radicals and oxidative stress.",
         author: "Dr. Julian Park",
-        date: "44 months ago",
+        date: "4 months ago",
         category: "Lifestyle",
         image:
             "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=800&q=80",

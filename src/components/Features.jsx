@@ -1,6 +1,7 @@
 import { ChevronRight } from 'lucide-react'
 import FadeIn from '../helpers/FadeIn'
 import { motion } from 'framer-motion'
+import eco from '../assets/images/eco/1.png'
 
 const Features = () => {
     return (
@@ -17,7 +18,7 @@ const Features = () => {
                         stiffness: 120
                     }}
                     className="relative flex-1 flex items-center justify-center ">
-                    <img src="/images/eco/1.png" alt="ocean"
+                    <img src={eco} alt="ocean"
                         className='min-w-2xs w-[400px] sm:w-[400px] md:w-[600px] lg:w-[450px] rounded-2xl ' />
                 </motion.div>
                 {/* right */}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-
+import orange from '../assets/images/products/orange.png'
 const Hero = () => {
     return (
         <section className="relative w-full min-h-screen pt-16 bg-primary">
@@ -50,7 +50,7 @@ const Hero = () => {
                     }} >
                     <img
                         className="min-w-2xs w-[400px] sm:w-[400px] md:w-[600px] lg:w-[500px] rounded-2xl"
-                        src="/images/products/orange.png" alt="sunscreen_image" />
+                        src={orange} alt="sunscreen_image" />
                 </motion.div>
 
             </div>

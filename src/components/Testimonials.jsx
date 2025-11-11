@@ -2,42 +2,47 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 import React, { useState } from 'react'
 import FadeIn from '../helpers/FadeIn'
-
+import person_1 from '../assets/images/users/person_1.png'
+import person_2 from '../assets/images/users/person_2.png'
+import person_3 from '../assets/images/users/person_3.png'
+import person_4 from '../assets/images/users/person_4.png'
+import person_5 from '../assets/images/users/person_5.png'
+import person_6 from '../assets/images/card_3.png'
 const testimonials = [
     {
         name: "Emma Rodriguez",
         role: "Marketing director, tech startup",
-        image: "/images/users/person_1.png",
+        image: person_1,
         quote: "DailySPF changed my daily skincare routine completely."
     },
     {
         name: "Michael Chen",
         role: "Software engineer, San Francisco",
-        image: "/images/users/person_5.png",
+        image: person_5,
         quote: "Finally, a sunscreen that doesn't feel heavy or greasy."
     },
     {
         name: "Sarah Thompson",
         role: "Creative director, design agency",
-        image: "/images/users/person_3.png",
+        image: person_3,
         quote: "Protecting my skin has never been this easy and stylish."
     },
     {
         name: "Juliea David",
         role: "Marketing Lead",
-        image: "/images/users/person_2.png",
+        image: person_2,
         quote: "This one blends perfectly and doesn’t leave a white cast. Highly recommend for daily use."
     },
     {
         name: "Raven Thomas",
         role: "Entrepreneur",
-        image: "/images/users/person_4.png",
+        image: person_4,
         quote: "It’s honestly the best sunscreen I’ve ever used worth every penny."
     },
     {
         name: "Sofia Williams",
         role: "Product Designer",
-        image: "/images/card_3.png",
+        image: person_6,
         quote: "It feels light, smells great, and gives my skin a healthy glow every day.",
     },
 ]

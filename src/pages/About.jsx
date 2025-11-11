@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import InfoCard from "../components/InfoCard";
 import { Lightbulb, ShieldCheck, Users2 } from "lucide-react";
+import banner from '../assets/images/card_2.png'
 
 const About = () => {
     return (
@@ -13,7 +14,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 1 }}
                         transition={{ duration: 0.4 }}
                         viewport={{ once: true }}
-                        src="/images/card_2.png"
+                        src={banner}
                         alt="sunscreen"
                         className="w-full h-full object-cover"
                     />
